@@ -1,6 +1,8 @@
-function show_form(form_id){
-  	$("form").hide();
-    $('#'+form_id).show();
+function edit_show_note(id,title,description,token){
+	$("#edit_note_id"+id).val(id);
+	$("#edit_note_title"+id).val(title);
+	$("#edit_note_description"+id).val(description);
+	$('#edit_note'+id).show();
 }
 
 function addTask(token){
@@ -109,7 +111,8 @@ function addNote(token){
 }
 
 function cancelnote(id){
-	$('#edit_note'+id).hide('slow');
+	$('#edit_note'+id).hide();
+
 }
 
 function delete_note(id,token){
@@ -130,6 +133,7 @@ function delete_note(id,token){
         }
     });
 }
+
 
 
 

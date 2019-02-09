@@ -3,16 +3,16 @@
 <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
 
 @section('content')
-<div class="container">
+<div class="container-fluid">
     <div class="row">
-        <div class="col-sm-12">
+        <div class="col-sm-6">
             <div class="card">
                 <div class="row">
                     <div class="col-md-12">
-                        @if(Session::has('message'))
+                        @if(Session::has('alert-message'))
                         <p class="alert {{ Session::get('alert-class', 'alert-info') }}">
                         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                        {{ Session::get('message') }}
+                        {{ Session::get('alert-message') }}
                         </p>
                         @endif
                     </div>
@@ -39,7 +39,7 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="list-group-item col-8 col-sm-8">
+                                <div class="list-group-item col-12 col-sm-12">
                                     @if(isset($todos))
                                         @foreach($todos as $todo)
                                             <div class="row">  
@@ -83,6 +83,9 @@
                 </div> <!-- card body -->
             </div>   <!-- card -->          
         </div> <!-- col-6 -->
+
+        @include('note')
+
     </div>
 </div>
 <!-- <script src="js/jquery-latest.min.js"type="text/javascript"></script> -->

@@ -29,7 +29,7 @@ Route::post('/deleteItem/{id}', 'TodoController@deleteItem' );
 
 
 // Note route
-Route::get('/note', 'NoteController@index');
+// Route::get('/note', 'NoteController@index');
 Route::post('/addNote', 'NoteController@addNote');
 Route::post('/updateNote', 'NoteController@updateNote');
 Route::post('/deleteNote/{id}', 'NoteController@deleteNote');

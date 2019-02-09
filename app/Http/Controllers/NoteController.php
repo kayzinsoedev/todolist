@@ -65,7 +65,7 @@ class NoteController extends Controller
         Session::flash('message', 'Note Updated Successfully!'); 
         Session::flash('alert-class', 'alert-success');
         $note->save();     
-        return redirect('note');
+        return redirect('/');
     }
 
 

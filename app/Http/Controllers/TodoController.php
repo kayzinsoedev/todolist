@@ -46,7 +46,7 @@ class TodoController extends Controller
         $todo->user_id = $request->user_id;
         $todo->title = $request->title ;
         $todo->save();    
-        Session::flash('message', 'Todo List Created Successfully!'); 
+        Session::flash('alert-message', 'Todo List Created Successfully!'); 
         Session::flash('alert-class', 'alert-success');  
         return response()->json($todo); 
     }
@@ -64,10 +64,10 @@ class TodoController extends Controller
         $todo = Todo::find($request->id);
         $todo->status = $request->status;  
         if($request->status == 1){
-            Session::flash('message', 'Todo List Completed!'); 
+            Session::flash('alert-message', 'Todo List Completed!'); 
             Session::flash('alert-class', 'alert-success');
         }elseif($request->status == 0){
-            Session::flash('message', 'Undo Todo List'); 
+            Session::flash('alert-message', 'Undo Todo List'); 
             Session::flash('alert-class', 'alert-success');
         }
         $todo->save();
@@ -82,7 +82,7 @@ class TodoController extends Controller
      */
     public function deleteItem(Request $request){
         Todo::find($request->id)->delete();
-        Session::flash('message', 'Todo List Deleted Successfully!'); 
+        Session::flash('alert-message', 'Todo List Deleted Successfully!'); 
         Session::flash('alert-class', 'alert-danger');
         return response()->json();
     }

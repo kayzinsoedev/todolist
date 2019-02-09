@@ -39,18 +39,11 @@
                         {{ config('app.name', 'Todo List') }}
                     </a>
                 @else
-                    <a class="navbar-brand"></a>
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        TodoList
-                    </a>
-                    <a class="navbar-brand"></a>
-                    <a class="navbar-brand"></a>
-                    <a class="navbar-brand"></a>
-                    <a class="navbar-brand"></a>
-                    <a class="navbar-brand"></a>
-                    <a class="navbar-brand" href="{{ url('/note') }}">
-                        Notes
-                    </a>
+                        <h3>
+                            <i class="fa fa-pencil fa-lg " aria-hidden="true"> To Do / Note</i> 
+                        </h3>                    
+                    </a>                    
                 @endguest
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
