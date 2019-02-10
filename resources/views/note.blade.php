@@ -26,7 +26,7 @@
                 <div class="row">
                     <div class="col-sm-8 note">
                         {!! Form::text('note_title', null, array('id'=>'note_title', 'class' => 'form-control txtsize', 'required' => 'required', 'placeholder'=>'Enter a Note Title', )); !!}                               
-                        {!! Form::textarea('description', null, array('id'=>'description', 'class' => 'form-control txtsize', 'required' => 'required', 'placeholder'=>'Enter Description', 'style'=>'height:20%;' )); !!}
+                        {!! Form::textarea('description', null, array('id'=>'description', 'class' => 'form-control txtsize', 'required' => 'required', 'placeholder'=>'Enter Description', 'rows' => '3'  )); !!}
                         {!! Form::text('user_id', $user_id, array('id'=>'user_id', 'class' => 'form-control',  'hidden'=>'hidden' )); !!}
                     </div>
                     <div class="col-sm-4">                                
@@ -76,7 +76,7 @@
 
                                             {!! Form::text('edit_note_title', null, array('id'=>'edit_note_title'.$note->id, 'class' => 'form-control txtsize', 'required' => 'required', )); !!}
 
-                                            {!! Form::textarea('edit_note_description', null, array('id'=>'edit_note_description'.$note->id, 'class' => 'form-control txtsize',  'placeholder'=>'', 'style'=> 'height:100px;')); !!}
+                                            {!! Form::textarea('edit_note_description', null, array('id'=>'edit_note_description'.$note->id, 'class' => 'form-control txtsize',  'placeholder'=>'', 'rows' => '3' )); !!}
 
                                             {!! Form::text('edit_note_id', null, array('id'=>'edit_note_id'.$note->id, 'class' => 'form-control',  'hidden'=>'hidden'  )); !!}
 
