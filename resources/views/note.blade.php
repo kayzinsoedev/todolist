@@ -31,7 +31,7 @@
                     </div>
                     <div class="col-sm-4">                                
                         <button class="btn btn-primary" id="add-note" type="submit" onclick="addNote('{{csrf_token()}}')" data-token="{{ csrf_token() }}">
-                                 <i class="fa fa-plus fa-lg fa-2x" aria-hidden="true"></i>  
+                                 <i class="fa fa-plus fa-lg" aria-hidden="true"></i> Create 
                         </button>
                     </div>
                 </div>

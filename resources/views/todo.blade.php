@@ -34,7 +34,7 @@
                                 </div>
                                 <div class="col-sm-3">
                                     <button class="btn btn-primary" id="add-task" type="submit" onclick="addTask('{{csrf_token()}}')">
-                                        <i class="fa fa-plus fa-lg fa-2x" aria-hidden="true"></i> 
+                                        <i class="fa fa-plus fa-lg" aria-hidden="true"></i> Create 
                                     </button>
                                 </div>
                             </div>
