@@ -61,7 +61,7 @@ class TodoController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function editItem(Request $request){
-        $todo = Todo::find($request->id);
+        $todo = Todo::findorFail($request->id);
         $todo->status = $request->status;  
         if($request->status == 1){
             Session::flash('alert-message', 'Todo List Completed!'); 

@@ -43,7 +43,7 @@
                             @foreach($notes as $note)
                                 <div class="row">  
                                     <div class="col-sm-8">                                        
-                                        <a href="#show_note{{$note->id}}" id="show_note{{$note->id}}" data-toggle="collapse" aria-expanded="false" aria-controls="show_note" class="txtsize"
+                                        <a href="#show_note{{$note->id}}" data-toggle="collapse" aria-expanded="false" aria-controls="show_note" class="txtsize"
                                             >{{$note->title}}</a>
 
                                         <div class="collapse" id="show_note{{$note->id}}">

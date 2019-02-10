@@ -59,7 +59,7 @@ class NoteController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function updateNote(Request $request) {
-    	$note = Note::find($request->edit_note_id); 
+    	$note = Note::findorFail($request->edit_note_id); 
     	$note->title = $request->edit_note_title ;
         $note->description = $request->edit_note_description ;    		
         Session::flash('message', 'Note Updated Successfully!'); 
@@ -76,7 +76,7 @@ class NoteController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function deleteNote(Request $request){
-        Note::findorFail($request->id)->delete();
+        Note::find($request->id)->delete();
         Session::flash('message', 'Note Deleted Successfully!'); 
         Session::flash('alert-class', 'alert-danger');
         return response()->json();
