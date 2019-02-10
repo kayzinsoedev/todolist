@@ -61,10 +61,10 @@ class NoteController extends Controller
     public function updateNote(Request $request) {
     	$note = Note::findorFail($request->edit_note_id); 
     	$note->title = $request->edit_note_title ;
-        $note->description = $request->edit_note_description ;    		
+        $note->description = $request->edit_note_description ;
+        $note->save();    		
         Session::flash('message', 'Note Updated Successfully!'); 
         Session::flash('alert-class', 'alert-success');
-        $note->save();     
         return redirect('/');
     }
 

@@ -54,13 +54,13 @@
                                                 <div class="col-sm-1"> 
                                                     @if($todo->status == 1)
                                                         <label class="checkcontainer">                             
-                                                            <input class="status" id="status" type="checkbox"  name="task_check" checked="checked" onchange="add('{{$todo->id}}','{{csrf_token()}}',this )" >            
+                                                            <input class="status" id="status" type="checkbox"  name="task_check" checked="checked" onchange="changeStatus('{{$todo->id}}','{{csrf_token()}}',this )" >            
                                                             </input>   
                                                             <span class="checkmark"></span>
                                                         </label>                                              
                                                     @else
                                                         <label class="checkcontainer">
-                                                            <input class="status" id="status" type="checkbox"  name="task_check" onchange="add('{{$todo->id}}','{{csrf_token()}}',this )" >
+                                                            <input class="status" id="status" type="checkbox"  name="task_check" onchange="changeStatus('{{$todo->id}}','{{csrf_token()}}',this )" >
                                                             <span class="checkmark"></span>
                                                         </label>
                                                     @endif                                                  

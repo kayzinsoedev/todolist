@@ -1,10 +1,3 @@
-function edit_show_note(id,title,description,token){
-	$("#edit_note_id"+id).val(id);
-	$("#edit_note_title"+id).val(title);
-	$("#edit_note_description"+id).val(description);
-	$('#edit_note'+id).show();
-}
-
 function addTask(token){
 	if($('input[name=title]').val() == ""){
 		alert("Please Enter To do Item");
@@ -31,8 +24,7 @@ function addTask(token){
 	}      
 }
 
-// Check TodoList
-function add(taskid,token,ck){
+function changeStatus(taskid,token,ck){
 	if(ck.checked){
 		var status =1;
 	}else{
@@ -106,13 +98,18 @@ function addNote(token){
 	    });
     	$('#note_title').val('');    
     	$('#description').val(''); 
-    }
-       
+    }    
+}
+
+function edit_show_note(id,title,description,token){
+	$("#edit_note_id"+id).val(id);
+	$("#edit_note_title"+id).val(title);
+	$("#edit_note_description"+id).val(description);
+	$('#edit_note'+id).show();
 }
 
 function cancelnote(id){
 	$('#edit_note'+id).hide();
-
 }
 
 function delete_note(id,token){
